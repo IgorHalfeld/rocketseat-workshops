@@ -1,4 +1,4 @@
-# Clean Archicture no Node.js
+# Node.js Apps com TypeScript, Express e Clean Architecture.
 
 > Como dividir suas aplicações em camadas
 
