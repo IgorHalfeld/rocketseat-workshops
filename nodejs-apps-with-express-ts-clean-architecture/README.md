@@ -20,7 +20,8 @@ Vamos fazer a API de um checkout de um e-commerce. O Endpoint `/checkout` irá r
 }
 ```
 
-> **Esse exemplo tenta simular da forma mais didática possivel um cenário de checkout de um e-commerce, mas como é um exemplo, precisa ser revisto antes de aplicar em produção**
+> 🚨Esse exemplo tenta simular da forma mais didática possível um cenário de checkout de um e-commerce. Várias coisas aqui precisam ser revistas antes de um cenário de produção (eu vou falar essas coisas no workshop).
+> Se você não for no workshop, entre em contato comigo para eu lhe explicar quais cuidados tomar 🚨
 
 ## Regras
 
