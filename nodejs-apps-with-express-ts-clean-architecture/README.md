@@ -4,7 +4,7 @@
 
 ## Objetivo
 
-Vamos fazer a API de um checkout de um e-commerce. O Endpoint de checkout irá receber o seguinte payload.
+Vamos fazer a API de um checkout de um e-commerce. O Endpoint `/checkout` irá receber o seguinte payload via `POST`.
 
 ```json
 {
