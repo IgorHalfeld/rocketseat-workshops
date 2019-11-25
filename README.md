@@ -2,5 +2,5 @@
 
 > Workshops que eu lecionei no evento da rocketseat
 
-- [Clean Archicture em Node.js Apps]()
+- [Node.js Apps com TypeScript, Express e Clean Archicture]()
 - [React.js Patterns]()

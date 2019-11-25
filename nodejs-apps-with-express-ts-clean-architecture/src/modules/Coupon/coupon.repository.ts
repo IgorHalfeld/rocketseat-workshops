@@ -1,0 +1,19 @@
+import { mongoClient } from '../../libs/database';
+import { ApplyCouponRequest, ApplyCouponResponse } from './coupon.types';
+import { find } from './coupon.querybuilder';
+
+export async function apply (payload: ApplyCouponRequest): Promise<ApplyCouponResponse> {
+  const Coupons = mongoClient.collection('coupons');
+  const coupon = await Coupons.findOne(find(payload.coupon));
+
+  const products = payload.products.map(product => {
+    if (product.type !== coupon.valid_for) return { ...product };
+    const finalPrice = product.price - (product.price * (coupon.amount / 100))
+    return {
+      ...product,
+      price: finalPrice
+    }
+  });
+
+  return { products };
+}
