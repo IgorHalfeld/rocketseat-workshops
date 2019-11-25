@@ -55,9 +55,18 @@ function apply(payload) {
             switch (_a.label) {
                 case 0:
                     Coupons = database_1.mongoClient.collection('coupons');
+                    if (!payload.coupon) {
+                        console.log('Coupon not provided');
+                        return [2 /*return*/, { products: payload.products }];
+                    }
+                    ;
                     return [4 /*yield*/, Coupons.findOne(coupon_querybuilder_1.find(payload.coupon))];
                 case 1:
                     coupon = _a.sent();
+                    if (!coupon) {
+                        console.log('Coupon not found');
+                        return [2 /*return*/, { products: payload.products }];
+                    }
                     products = payload.products.map(function (product) {
                         if (product.type !== coupon.valid_for)
                             return __assign({}, product);
